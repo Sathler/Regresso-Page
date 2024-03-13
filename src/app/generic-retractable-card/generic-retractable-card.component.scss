@@ -1,0 +1,30 @@
+.card-title {
+    margin-bottom: 0;
+}
+
+.card-header{
+    background-color: #72ceff;
+    &.blocked{
+        background-color:  #ffa372;
+    }
+}
+
+.arrow-icon-down, .arrow-icon-up{
+    color: black;
+}
+
+.math-expression {
+
+}
+  
+.coefficient, .constant {
+    font-style: italic;
+}
+  
+.variable {
+font-weight: bold;
+}
+
+.plus {
+margin: 0 5px;
+}

@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+.toast {
+    display: block;
+}
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body{
+    background-color: black;
+}
+
+.container {
+    height: 100vh;
+    background-color: white;
+}
+  

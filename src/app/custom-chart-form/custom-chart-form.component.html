@@ -1,0 +1,27 @@
+<form [formGroup]="paramsForm" (ngSubmit)="onSubmit()" class="pt-4 mb-4">
+    <div class="mb-3">
+        <label for="params" class="form-label">
+            Valores de X
+        </label>
+        <textarea class="form-control" id="params" type="text" formControlName="params" rows="4"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="results" class="form-label">
+            Valores de Y
+        </label>
+        <textarea class="form-control" id="results" type="text" formControlName="results" rows="4"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="aprox" class="form-label">
+            Aproximação Decimal
+        </label>
+        <input class="form-control" id="aprox" type="number" formControlName="aprox" min="0" max="10">
+    </div>
+    <div class="mb-3">
+        <label for="function" class="form-label">
+            Função
+        </label>
+        <textarea class="form-control" id="function" type="text" formControlName="function" rows="1"></textarea>
+    </div>
+    <button class="button btn text-white" type="submit">Calcular!</button>
+</form>

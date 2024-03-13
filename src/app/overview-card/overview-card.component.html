@@ -1,0 +1,22 @@
+<div *ngIf="showComponent" class="card border border-dark p-2 mb-2 mt-2">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Tipo</th>
+                <th scope="col">Coeficiente de Determinação</th>
+                <th scope="col">Coeficiente de Correlação</th>
+                <th scope="col">Erro Quadrático Médio</th>
+                <th scope="col">Erro Relativo Médio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr [ngClass]="{'table-success': item.betterCurve}" *ngFor="let item of results">
+                <th> {{ item.type }}</th>
+                <th> {{ item.determination | number:item.aprox }} </th>
+                <th> {{ item.correlation | number:item.aprox }} </th>
+                <th> {{ item.rmse | number:item.aprox }} </th>
+                <th> {{ item.error | number:item.aprox }} </th>
+            </tr>
+        </tbody>
+    </table>
+</div>
