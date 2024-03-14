@@ -863,7 +863,7 @@ export class GenericRetractableCardComponent implements OnInit {
   }
 
   async calculateCustomChart(params: number[], results: number[], aprox: number, func: string) {
-    let response = await this.apiService.getDataRegression(this.type, params, results, 20, func)
+    let response = await this.apiService.getDataRegression(this.type, params, results, 20, this.aprox, func)
 
     if(response.success){
 
@@ -896,7 +896,7 @@ export class GenericRetractableCardComponent implements OnInit {
       let data = [trace1, trace2];
 
       if('expression' in response.response && response.response['expression'] !== undefined ){
-        this.equationValue = response.response['expression']
+        this.equationValue = response.response['expression'], this.aprox
       }
       else{
         this.equationValue = ''

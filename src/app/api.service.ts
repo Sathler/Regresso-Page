@@ -11,7 +11,7 @@ export class ApiService {
   private apiEnv: string = 'hospedada';
   constructor(private _httpClient: HttpClient){}
 
-  async getDataRegression(type: string, params: number[], results: number[], aprox?: number, expr?: string):
+  async getDataRegression(type: string, params: number[], results: number[], aprox?: number, print_aprox?: number, expr?: string):
   Promise <{success: boolean, response: ApiResponse, message?: string}>{
     const BASE_URL = environment.baseUrl
     const LOCAL_URL = environment.localUrl
@@ -23,7 +23,7 @@ export class ApiService {
         this._httpClient.post<{success: boolean, response: ApiResponse}>(
           api_url,
           {
-            type, params, results, aprox, expr
+            type, params, results, aprox, print_aprox, expr
           }
         )
       )
